@@ -1,21 +1,15 @@
 <!doctype html>
-<html lang='eng' >
+<html lang='eng' ng-app='com1'>
   <head>
       <title>AngularJS ng-app Directive</title>
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
   </head>
   <body>
-    
-    <div>
-      <div id='view'></div>
-      <!-- <greet-user is-test=true></greet-user> -->
-      <!-- <div ng-controller='testController'></div> -->
+    <div ng-controller='controller1'>
+      <button ng-click="openForm()">Open Form</button>
     </div>
 
-
     <script src="./script/angular.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.2/angular-route.js" integrity="sha512-C92rntF0G0YH9kHzQlpux7ADvyKgyUwBqusewsHs/0ibOTNuHxFyVqDkI0BIcLGyP76fxgLOpMOLO6kmHCS/xA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
     <script src='./script/app.js'></script>
-
   </body>
 </html>
