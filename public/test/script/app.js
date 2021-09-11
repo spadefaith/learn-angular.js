@@ -11,13 +11,21 @@ com1.factory('sat', function(){
 
 com1.controller('c1-control', ['$scope', '$compile', function($scope, $compile){
     $scope.name = 'james';
-    let html = $compile(`<p>Hello World</p>`)($scope);
+    let html = `<p>Hello World</p>`
+    
+    let template = angular.element(html);
+    let link = $compile(template);
+    let el = link($scope);
 
-    angular.element(document.getElementById('view')).append(html);
+    document.body.appendChild(el);
 }]);
 
 let c1 = document.createElement('div');
 c1.setAttribute('ng-controller','c1-control');
+
+
+
+
 
 
 
